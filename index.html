@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="/src/js/controller.js"></script>
+    <link rel="stylesheet" href="/src/css/main.css">
+    <title>Forkify</title>
+    <link rel="shortcut icon" type="image/jpg" href="/src/img/favicon.png"/>
+</head>
+
+<body>
+    <div class="main">
+
+        <div class="nav">
+            <img src="./src/img/logo.png" alt="logo.png not found">
+            <div class="searcher">
+                <input class="foodSearch" placeholder="Search for food/recipe" type="text">
+                <button class="searchBtn" type="button"><svg style="fill:white;" class="search__icon"><use href="/src/img/icons.svg#icon-search"></use></svg> SEARCH</button>
+            </div>
+            <div class="buttons">
+                <button class="addRecipeBtn" type="button"><svg class="nav__icon"><use href="/src/img/icons.svg#icon-edit"></use></svg> ADD RECIPE</button>
+                <button class="bookmarkBtn" type="button"><svg class="nav__icon"><use href="/src/img/icons.svg#icon-bookmark"></use></svg> BOOKMARKS</button>
+            </div>
+        </div>
+
+        <div class="searchResults">
+        </div>
+
+        <div class="displayRecipe">
+            <span class="starterString"><svg><use href="src/img/icons.svg#icon-smile"></use></svg>Start by searching for a recipe or an ingredient. Have fun!</span>
+        </div>
+
+        <div class="bookmarks"></div>
+
+        <div class="formOverlay hidden">
+            <div class="addForm">
+                <div class="recipeData">
+                    <h2>RECIPE DATA</h2>
+                    <div class="data">
+                        <span>Title</span> <input  class="titleInput" placeholder="Name of your recipe" type="text" required>
+                        <span>URL</span> <input  class="urlInput" placeholder="Valid url for more info" type="text" required>
+                        <span>Image URL</span> <input  class="imageUrlInput" placeholder="Valid Image URL" type="text" required>
+                        <span>Publisher</span> <input  class="publisherInput" placeholder="Publisher Name" type="text" required>
+                        <span>Prep time</span> <input  class="timeInput" placeholder="Mins taken to cook" type="number" required>
+                        <span>Servings</span> <input  class="servingInput" placeholder="No of intended servings" type="number" required>
+                    </div>
+                </div>
+                <div class="ingredientsDiv">
+                    <h2>INGREDIENTS</h2>
+                    <div class="ingredientList">
+                        <span class="ingredient"><input  class="quantity" placeholder="Quantity" type="number"><input  class="unit" placeholder="Unit" type="text"><input  class="description" placeholder="Description" type="text"></span>
+                        <span class="ingredient"><input  class="quantity" placeholder="Quantity" type="number"><input  class="unit" placeholder="Unit" type="text"><input  class="description" placeholder="Description" type="text"></span>
+                        <span class="ingredient"><input  class="quantity" placeholder="Quantity" type="number"><input  class="unit" placeholder="Unit" type="text"><input  class="description" placeholder="Description" type="text"></span>
+                        <span class="ingredient"><input  class="quantity" placeholder="Quantity" type="number"><input  class="unit" placeholder="Unit" type="text"><input  class="description" placeholder="Description" type="text"></span>
+                        <span class="ingredient"><input  class="quantity" placeholder="Quantity" type="number"><input  class="unit" placeholder="Unit" type="text"><input  class="description" placeholder="Description" type="text"></span>
+                        <span class="ingredient"><input  class="quantity" placeholder="Quantity" type="number"><input  class="unit" placeholder="Unit" type="text"><input  class="description" placeholder="Description" type="text"></span>
+ 
+                    </div>
+                </div>
+                <button type="button" class="formCloseBtn">x</button>
+                <button type="button" class="uploadBtn"><svg><use href="/src/img/icons.svg#icon-upload-cloud"></use></svg> &nbsp;UPLOAD</button>
+            </div>
+
+            <div class="submitMessage hidden">
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
