@@ -65,6 +65,9 @@ svg
 .displayRecipe .options .notbookmarked svg{
     background-color: white;
 }
+.searchBtn svg{
+    fill:white;
+}
 .nav .searcher{
     background-color: white;
     border-radius: 30px;
