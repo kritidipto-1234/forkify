@@ -44,9 +44,10 @@ class SearchResultsView extends View
 
     addHandler(task)
     {
-        searchBtn.addEventListener('click',e=>{foodInput.blur();task();});
+        searchBtn.addEventListener('click',e=>{if (foodInput.value.trim().length===0) return;foodInput.blur();task();});
         foodInput.addEventListener('keydown',function(e)
         {
+            if (foodInput.value.trim().length===0) return;
             if (e.key!=='Enter') return;
             foodInput.blur();
             task();

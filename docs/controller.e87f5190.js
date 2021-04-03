@@ -12947,10 +12947,12 @@ var SearchResultsView = /*#__PURE__*/function (_View) {
     key: "addHandler",
     value: function addHandler(task) {
       searchBtn.addEventListener('click', function (e) {
+        if (foodInput.value.trim().length === 0) return;
         foodInput.blur();
         task();
       });
       foodInput.addEventListener('keydown', function (e) {
+        if (foodInput.value.trim().length === 0) return;
         if (e.key !== 'Enter') return;
         foodInput.blur();
         task();
@@ -13800,7 +13802,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39837" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34627" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
